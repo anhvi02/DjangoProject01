@@ -11,6 +11,6 @@ class Info(models.Model):
     sao = models.IntegerField(verbose_name='Số sao', default=0)
     link_sp = models.URLField(verbose_name='Link sản phẩm', max_length=265, null=True)
     anh_sp = models.ImageField(verbose_name='Ảnh sản phẩm', upload_to = 'media_anh', blank=True)
-    
+
     def __str__(self):
         return self.ten

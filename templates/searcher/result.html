@@ -1,0 +1,39 @@
+{% extends "searcher/base.html" %}
+
+{% block body_block%}
+<div class="container">
+  <div class="jumbotron">
+    <h2>Your results goes here</h1>
+    <table>
+      <thead>
+        <th>Tên sản phẩm</th>
+        <th>Giá gốc</th>
+        <th>Giá sale</th>
+        <th>Phần trăm sale</th>
+        <th>Số đánh giá</th>
+        <th>Số sao</th>
+        <th>Tình trạng sản phẩm</th>
+        <th>Link sản phẩm</th>
+        <th>Ảnh sản phẩm</th>
+
+
+      </thead>
+      {% for item in top_sale %}
+      <tr>
+        <td>{{item.ten}}</td>
+        <td>{{item.gia_goc}}</td>
+        <td>{{item.gia_sale}}</td>
+        <td>{{item.sale_rate}}</td>
+        <td>{{item.con_hang}}</td>
+        <td>{{item.luot_danh_gia}}</td>
+        <td>{{item.sao}}</td>
+        <td>{{item.link_sp}}</td>
+        <td>{{item.anh_sp}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+  </div>
+
+</div>
+{% endblock %}
